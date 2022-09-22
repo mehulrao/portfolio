@@ -1,10 +1,11 @@
+const withPreact = require("next-plugin-preact");
 const path = require("path");
 
-module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-  },
-  images: {
-    domains: ["cdn.discordapp.com", "i.scdn.co"],
-  },
-};
+module.exports = withPreact({
+    sassOptions: {
+        includePaths: [path.join(__dirname, "styles")],
+    },
+    images: {
+        domains: ["cdn.discordapp.com", "i.scdn.co"],
+    },
+});
