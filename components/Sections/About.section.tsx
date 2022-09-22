@@ -14,7 +14,7 @@ const About: NextComponentType = () => {
                     Software Enginner Intern and Student
                 </p>
 
-                <p className="mt-4 text-gray-400">
+                <p className="mt-3 text-gray-400">
                     Building Web Apps and Managing Servers
                 </p>
             </div>
