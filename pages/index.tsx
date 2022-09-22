@@ -19,7 +19,6 @@ const Home: NextPage = () => {
       <Contact />
 
       <div className="flex justify-center">
-        <NowPlaying />
       </div>
     </div>
   );
