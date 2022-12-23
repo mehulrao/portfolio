@@ -11,7 +11,6 @@ import "@fontsource/sen/700.css";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
