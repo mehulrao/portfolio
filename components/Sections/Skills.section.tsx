@@ -5,17 +5,17 @@ const Skills = () => {
         <div className="my-16 px-3 font-sen text-white" id="skills">
             <p className="text-3xl font-bold text-white">Skills & Uses</p>
 
-            <div className="text-md my-8 flex flex-col font-medium md:text-xl custom:text-lg">
+            <div className="text-md my-8 flex flex-col font-medium custom:text-lg md:text-xl">
                 <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
                     <BsArrowRightShort size="30" />
-                    <span className="text-white">NextJS</span>
-                    &nbsp;as my Frontend Framework
+                    <span className="text-white">Java</span>
+                    &nbsp;as my main language
                 </p>
 
                 <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
                     <BsArrowRightShort size="30" />
-                    <span className="text-white">Typescript </span>
-                    &nbsp;as my main language
+                    <span className="text-white">AWS </span>
+                    &nbsp;as my Cloud Provider
                 </p>
 
                 <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
@@ -26,8 +26,8 @@ const Skills = () => {
 
                 <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
                     <BsArrowRightShort size="30" />
-                    <span className="text-white">Laravel </span>
-                    &nbsp;as my PHP framework
+                    <span className="text-white">Unity </span>
+                    &nbsp;as my Game Development framework
                 </p>
 
                 <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
@@ -41,11 +41,9 @@ const Skills = () => {
                 ...more skills include{" "}
                 <span className="text-yellow-600">javascript</span>,{" "}
                 <span className="text-blue-400">reactjs</span>,{" "}
-                <span className="text-yellow-400">python</span>,{" "}
-                <span className="text-violet-400">php</span>,{" "}
-                <span className="text-orange-400">java</span>,{" "}
+                <span className="text-purple-400">C#</span>,{" "}
                 <span className="text-white">and</span>{" "}
-                <span className="text-purple-700">devops</span>{" "}
+                <span className="text-yellow-400">python</span>,{" "}
             </p>
         </div>
     );
