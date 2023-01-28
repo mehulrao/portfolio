@@ -39,7 +39,7 @@ const Projects: NextComponentType = () => {
                     </a>
                 </Link>
 
-                <Link href="https://github.com/mehulrao/Racecar-ML" passHref>
+                <Link href="https://github.com/mehulrao/2D-Game" passHref>
                     <a
                         className="h-[7rem] w-[14rem] cursor-pointer rounded-lg bg-gradient-to-r from-[#FF9190] to-[#FDC094] p-1 text-white duration-100 hover:scale-105"
                         target="_blank"
