@@ -7,6 +7,7 @@ import {
 } from "../Misc/Icons.collection";
 
 import { Icon } from "../Misc/Icon.component";
+import { AiOutlineLinkedin } from "react-icons/ai";
 
 const Contact: NextComponentType = () => {
     return (
@@ -20,8 +21,8 @@ const Contact: NextComponentType = () => {
                 />
 
                 <Icon
-                    icon={<AiOutlineTwitter />}
-                    url="https://twitter.com/mehulrao13"
+                    icon={<AiOutlineLinkedin />}
+                    url="https://www.linkedin.com/in/mehul-rao-0231631a3/"
                 />
 
                 <Icon icon={<MdEmail />} url="mailto:mehulrao@gmail.com" />
