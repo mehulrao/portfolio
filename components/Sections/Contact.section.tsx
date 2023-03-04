@@ -3,11 +3,11 @@ import type { NextComponentType } from "next";
 import {
     MdEmail,
     AiOutlineGithub,
-    AiOutlineTwitter,
+    AiOutlineLinkedin,
+    AiOutlineMail,
 } from "../Misc/Icons.collection";
 
 import { Icon } from "../Misc/Icon.component";
-import { AiOutlineLinkedin } from "react-icons/ai";
 
 const Contact: NextComponentType = () => {
     return (
@@ -25,7 +25,10 @@ const Contact: NextComponentType = () => {
                     url="https://www.linkedin.com/in/mehul-rao-0231631a3/"
                 />
 
-                <Icon icon={<MdEmail />} url="mailto:mehulrao@gmail.com" />
+                <Icon
+                    icon={<AiOutlineMail />}
+                    url="mailto:mehulrao@gmail.com"
+                />
             </div>
         </div>
     );
