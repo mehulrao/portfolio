@@ -13,38 +13,37 @@ import Head from "next/head";
 import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
-    return (
-        <>
-            <NextSeo
-                title="Mehul | Software Engineer Intern"
-                titleTemplate="Mehul | Software Engineer Intern"
-                defaultTitle="Mehul | Software Engineer Intern"
-                description="Hey! I'm Mehul, A Software Enginner and a Student!"
-                openGraph={{
-                    url: "https://mehulrao.dev",
-                    title: "Mehul | Software Engineer Intern",
-                    description:
-                        "Hey! I'm Mehul, A Software Enginner and a Student!",
-                }}
-                twitter={{
-                    handle: "@mehulrao13",
-                    site: "@mehulrao13",
-                    cardType: "summary_large_image",
-                }}
-                additionalMetaTags={[
-                    {
-                        property: "keywords",
-                        content:
-                            "Frontend Developer, mehulrao, Mehul Rao, Web Developer, web development, web developer, tech enthusiast, open source",
-                    },
-                ]}
-            />
-            <Head>
-                <link rel="icon" type="image/svg" href="/assests/avatar.svg" />
-            </Head>
-            <Component {...pageProps} />
-        </>
-    );
+  return (
+    <>
+      <NextSeo
+        title="Mehul | Software Engineer Intern"
+        titleTemplate="Mehul | Software Engineer Intern"
+        defaultTitle="Mehul | Software Engineer Intern"
+        description="Hey! I'm Mehul, A Software Enginner and a Student!"
+        openGraph={{
+          url: "https://mehulrao.dev",
+          title: "Mehul | Software Engineer Intern",
+          description: "Hey! I'm Mehul, A Software Enginner and a Student!",
+        }}
+        twitter={{
+          handle: "@mehulrao13",
+          site: "@mehulrao13",
+          cardType: "summary_large_image",
+        }}
+        additionalMetaTags={[
+          {
+            property: "keywords",
+            content:
+              "Frontend Developer, mehulrao, Mehul Rao, Web Developer, web development, web developer, tech enthusiast, open source",
+          },
+        ]}
+      />
+      <Head>
+        <link rel="icon" type="image/svg" href="/assests/avatar.svg" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;

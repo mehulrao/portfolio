@@ -22,7 +22,7 @@ const TextLink: NextComponentType<NextPageContext, {}, linkProps> = ({
 const Header: NextComponentType = () => {
   return (
     <header
-      className={`font-jost py-8 sm:flex sm:flex-row sm:items-center sm:justify-between`}
+      className={`py-8 font-jost sm:flex sm:flex-row sm:items-center sm:justify-between`}
     >
       <p className="hidden sm:flex sm:flex-row sm:gap-x-4">
         <TextLink text="Home" url="#" />
