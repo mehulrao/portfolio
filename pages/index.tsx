@@ -1,13 +1,6 @@
 import type { NextPage } from "next";
 
-import {
-  Header,
-  About,
-  Projects,
-  Skills,
-  Contact,
-  NowPlaying,
-} from "../components";
+import { Header, About, Projects, Skills, Contact } from "../components";
 
 const Home: NextPage = () => {
   return (
@@ -18,8 +11,7 @@ const Home: NextPage = () => {
       <Projects />
       <Contact />
 
-      <div className="flex justify-center">
-      </div>
+      <div className="flex justify-center"></div>
     </div>
   );
 };
