@@ -11,7 +11,7 @@ const About: NextComponentType = () => {
       <div>
         <p className="text-3xl font-bold text-white">Mehul</p>
         <p className="mt-1 text-lg text-gray-300">
-          Software Enginner Intern and Student
+          Software Engineer Intern and Student
         </p>
 
         <p className="mt-3 text-gray-400">
