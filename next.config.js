@@ -1,7 +1,6 @@
-const withPreact = require("next-plugin-preact");
 const path = require("path");
 
-module.exports = withPreact({
+module.exports = ({
     sassOptions: {
         includePaths: [path.join(__dirname, "styles")],
     },
