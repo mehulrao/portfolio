@@ -20,6 +20,7 @@
     "preact-render-to-string": "^5.2.4",
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
+    "react-dom/server": "react-dom/server",
     "react-ssr-prepass": "npm:preact-ssr-prepass",
     "sass": "^1.49.10",
     "swr": "^1.3.0"
