@@ -19,7 +19,7 @@ const Contact: NextComponentType = () => {
 
         <Icon
           icon={<AiOutlineLinkedin />}
-          url="https://www.linkedin.com/in/mehul-rao-0231631a3/"
+          url="https://www.linkedin.com/in/mehulprao"
         />
 
         <Icon icon={<AiOutlineMail />} url="mailto:mehulrao@gmail.com" />
