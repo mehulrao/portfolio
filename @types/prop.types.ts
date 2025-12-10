@@ -1,5 +1,7 @@
+import type { ReactNode } from "react";
+
 interface iconProps {
-  icon: JSX.Element;
+  icon: ReactNode;
   url: string;
 }
 

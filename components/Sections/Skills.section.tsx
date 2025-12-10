@@ -1,53 +1,56 @@
-import { BsArrowRightShort } from "../Misc/Icons.collection";
+import { Section } from "../ui/Section";
+import { motion } from "framer-motion";
+
+const skillCategories = [
+  {
+    name: "Languages",
+    skills: ["Python", "Rust", "TypeScript", "Java", "C++", "C"]
+  },
+  {
+    name: "Cloud & DevOps",
+    skills: ["AWS", "GCP", "Docker", "Terraform", "Ansible", "Kubernetes"]
+  },
+  {
+    name: "AI / ML",
+    skills: ["LLM Fine-tuning", "RAG", "EKS Inference", "PyTorch", "HuggingFace"]
+  },
+  {
+    name: "Web & Databases",
+    skills: ["Next.js", "React", "PostgreSQL", "MongoDB", "Redis"]
+  }
+];
 
 const Skills = () => {
   return (
-    <div className="my-16 px-3 font-sen text-white" id="skills">
-      <p className="text-3xl font-bold text-white">Skills & Uses</p>
-
-      <div className="text-md my-8 flex flex-col font-medium custom:text-lg md:text-xl">
-        <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
-          <BsArrowRightShort size="30" />
-          <span className="text-white">Java</span>
-          &nbsp;as my Main Language
-        </p>
-
-        <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
-          <BsArrowRightShort size="30" />
-          <span className="text-white">AWS </span>
-          &nbsp;as my Cloud Provider
-        </p>
-
-        <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
-          <BsArrowRightShort size="30" />
-          <span className="text-white">NextJS </span>
-          &nbsp;as my Javascript Framework
-        </p>
-
-        <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
-          <BsArrowRightShort size="30" />
-          <span className="text-white">Unity </span>
-          &nbsp;as my Game Development Framework
-        </p>
-
-        <p className="flex flex-row items-center border-b-[0.1px] border-gray-500 py-1 text-slate-300 ring-zinc-300 duration-150 hover:scale-105 hover:ring-2">
-          <BsArrowRightShort size="30" />
-          <span className="text-white">Terraform </span>
-          &nbsp;as my DevOPS Framework
-        </p>
+    <Section id="skills" title="Skills">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {skillCategories.map((category, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            viewport={{ once: true }}
+            className="bg-zinc-900/30 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors"
+          >
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-blue-500" />
+              {category.name}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {category.skills.map((skill, i) => (
+                <span
+                  key={i}
+                  className="bg-zinc-800 text-gray-300 px-3 py-1.5 rounded-lg text-sm font-medium border border-transparent hover:border-zinc-600 transition-colors cursor-default"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
-
-      <p className="text-lg font-medium text-slate-300">
-        ...more skills include <span className="text-yellow-400">python</span>,{" "}
-        <span className="text-blue-400">reactjs</span>,{" "}
-        <span className="text-green-400">css</span>,{" "}
-        <span className="text-purple-400">php</span>,{" "}
-        <span className="text-orange-400">docker</span>,{" "}
-        <span className="text-red-400">ansible</span>,{" "}
-        <span className="text-white">and</span>{" "}
-        <span className="text-indigo-400">wordpress</span>,{" "}
-      </p>
-    </div>
+    </Section>
   );
 };
 

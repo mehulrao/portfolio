@@ -1,47 +1,54 @@
-import type { NextComponentType, NextPageContext } from "next";
-
+import type { NextComponentType } from "next";
 import Link from "next/link";
-import { VscGithubAlt } from "../Misc/Icons.collection";
+import { motion } from "framer-motion";
+import { Github } from "lucide-react";
 
-import type { linkProps } from "../../@types/prop.types";
-
-const TextLink: NextComponentType<NextPageContext, {}, linkProps> = ({
-  text,
-  url,
-}) => {
+const NavLink = ({ text, url }: { text: string; url: string }) => {
   return (
-    <a
-      href={url}
-      className="cursor-pointer rounded-md px-4 py-[0.10rem] text-xl text-gray-200 duration-100 hover:bg-zinc-800"
+    <Link 
+      href={url} 
+      scroll={true}
+      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm font-medium"
     >
       {text}
-    </a>
+    </Link>
   );
 };
 
 const Header: NextComponentType = () => {
   return (
-    <header
-      className={`py-8 font-jost sm:flex sm:flex-row sm:items-center sm:justify-between`}
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 md:px-12 backdrop-blur-md bg-black/50 border-b border-zinc-900"
     >
-      <p className="hidden sm:flex sm:flex-row sm:gap-x-4">
-        <TextLink text="Home" url="#" />
-        <TextLink text="Skills" url="#skills" />
-        <TextLink text="Projects" url="#projects" />
-        <TextLink text="Contact" url="#contact" />
-      </p>
-
-      <Link href="https://github.com/mehulrao" passHref>
-        <a
-          className="float-right mr-2 rounded-lg bg-zinc-800 p-2 text-2xl text-white ring-zinc-300 transition-all duration-150 hover:ring-2 sm:float-none sm:mr-0"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="github-repo"
-        >
-          <VscGithubAlt />
-        </a>
+      <Link 
+        href="/" 
+        className="text-xl font-bold font-jost text-white tracking-tight"
+      >
+        MR
       </Link>
-    </header>
+
+      <nav className="hidden md:flex items-center gap-8">
+        <NavLink text="About" url="#" />
+        <NavLink text="Experience" url="#experience" />
+        <NavLink text="Education" url="#education" />
+        <NavLink text="Skills" url="#skills" />
+        <NavLink text="Projects" url="#projects" />
+        <NavLink text="Contact" url="#contact" />
+      </nav>
+
+      <Link 
+        href="https://github.com/mehulrao" 
+        className="text-gray-400 hover:text-white transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="github-repo"
+      >
+        <Github size={24} />
+      </Link>
+    </motion.header>
   );
 };
 
