@@ -37,5 +37,8 @@
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3"
   },
-  "version": "0.3.0"
+  "version": "0.3.0",
+  "trustedDependencies": [
+    "unrs-resolver"
+  ]
 }
